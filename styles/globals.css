@@ -1,16 +1,239 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+html{
+  font-family: 'PT Sans', sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+body{
+  justify-content: center;
+  display: flex;
 }
 
-* {
-  box-sizing: border-box;
+main{
+  width: 80vw;
+  height: 100%;
+}
+
+.top-container{
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+}
+
+.input-container{
+  gap: 10px;
+  display: flex;
+}
+
+.input-container button{
+  padding: 5px;
+  font-family:  inherit;
+  font-size: medium;
+  font-weight: 700;
+  border: 1px solid;
+  border-radius: 5px;
+
+  &.delete{
+    background-color: #ffe7e7;
+    color: #d10000;
+    border-color: #d10000;
+  }
+  
+  &.publish{
+    background-color: #d9f2f8;
+    color: #2ab9dd;
+    border-color: #2ab9dd;
+  }
+}
+
+.search-input{
+  font-family:  inherit;
+  padding: 8px;
+  width: 30%;
+  border: 1px solid gray;
+  border-radius: 5px ;
+}
+
+.main-news-container{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+  padding: 10px;
+}
+
+.card-main-container{
+  background-color: rgb(240, 240, 240);
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  gap: 10px;
+}
+
+.first-card-container{
+  display: flex;
+  align-items: flex-start;
+
+  .drag-icon{
+    width: auto;
+    height: 30px;
+  }
+}
+
+.second-card-container{
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  max-width: 60%;
+
+  .title{
+    font-weight: 700;
+    font-size: large;
+  }
+
+  .card-details{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+  }
+
+  .sub-detail{
+    font-weight: 700;
+    color: gray;
+    letter-spacing: 0.6px;
+  }
+
+  .user-icon{
+    width: auto;
+    height: 25px;
+  }
+
+  .calendar-icon{
+    width: auto;
+    height: 27px;
+  }
+
+
+}
+
+.content-text{
+  margin-top: 5px;
+  color: gray;
+  letter-spacing: 0.6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 80%;
+}
+
+.content-container{
+  max-width: 80%;
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.third-card-container{
+  display: flex;
+  height: min-content;
+  width: 100%;
+  gap: 15px;
+  justify-content: flex-end;
+}
+
+.read-button{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #3682FF;
+  cursor: pointer;
+}
+
+.tag-container{
+  color: #00B473;
+  background-color: #def7ee;
+  padding: 5px 10px 5px 10px;
+  border: 1px solid #00B473;
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+#news-modal{
+  border-radius: 5px;
+  border: none;
+  width: 30%;
+  padding: 30px;
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+
+  .modal-top-container{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+
+    .title{
+      font-weight: 700;
+      font-size: x-large;
+    }
+  }
+  
+  .exit-button{
+    background-color: rgb(240, 240, 240);
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    font-weight: 700;
+    font-size: large;
+    height: min-content;
+    color: rgb(80, 80, 80);
+    cursor: pointer;
+  }
+
+  
+  .details{
+    font-weight: 700;
+    color: gray;
+    font-size: large;
+  }
+
+  .content{
+    border: 3px dotted black;
+    padding: 10px;
+    font-size: large;
+  }
+
+
+}
+
+.modal-button-container{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+
+  .publish{
+    padding: 10px;
+    font-family:  inherit;
+    font-size: large;
+    font-weight: 700;
+    border: 1px solid;
+    border-radius: 5px;
+    color: white;
+    background-color: #43baff;
+    cursor: pointer;
+  }
+
+  .delete{
+    padding: 10px;
+    font-family:  inherit;
+    font-size: large;
+    font-weight: 700;
+    border: 1px solid;
+    border-radius: 5px;
+    color: white;
+    background-color: #d10000;
+    cursor: pointer;
+  }
 }
